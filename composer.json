@@ -1,0 +1,34 @@
+{
+    "name": "matt/silverstripe-example",
+    "type": "project",
+    "require": {
+        "cwp/cwp-recipe-core": "2.4.0@stable",
+        "cwp/cwp-recipe-cms": "2.4.0@stable",
+        "cwp/cwp-recipe-search": "2.4.0@stable"
+    },
+    "authors": [
+        {
+            "name": "matt-in-a-hat",
+            "email": "matt@mediasuite.co.nz"
+        }
+    ],
+    "extra": {
+        "project-files-installed": [
+            "app/.htaccess",
+            "app/_config.php",
+            "app/_config/blog.yml",
+            "app/_config/environmentcheck.yml",
+            "app/_config/mysite.yml",
+            "app/src/Page.php",
+            "app/src/PageController.php"
+        ],
+        "public-files-installed": [
+            ".htaccess",
+            "index.php",
+            "install-frameworkmissing.html",
+            "install.php",
+            "web.config"
+        ]
+    },
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,39 @@
+# First we change gitignore default behaviour to work more like a git allowed.
+/*
+
+# Now we define the top level files and folders allowed in git.
+!/.gitignore
+!/.gitmodules
+!/.gitconfig
+!/.editorconfig
+!/.env.txt
+!/app
+!/app/*
+!/themes
+!/themes/*
+/themes/*/dist
+/themes/*/dist/*
+!/composer.json
+!/composer.lock
+!/README.md
+!/public/
+/public/*
+!/public/index.php
+!/public/.htaccess
+!/public/web.config
+
+# Finally we remove any environment files
+*Thumbs.db
+*web.config
+*.log
+*.buildpath
+*.project
+*.settings
+*.idea
+*.DS_Store
+*._.DS_Store
+*.codekit*
+*.sublime-*
+*.sass-cache
+*prepros.cfg
+*mix-manifest.json
