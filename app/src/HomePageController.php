@@ -2,9 +2,7 @@
 
 namespace {
 
-    use CWP\CWP\PageTypes\BaseHomePageController;
-
-    class HomePageController extends BaseHomePageController
+    class HomePageController extends PageController
     {
     }
 }

@@ -38,10 +38,12 @@ class ExampleJob extends AbstractQueuedJob implements QueuedJob
 	 * Increments the process step and checks if the job is complete.
 	 */
 	public function process() {
-		Injector::inst()->get(LoggerInterface::class)->info("RUNNING PROCESS STEP {$this->currentStep})");
+		Injector::inst()->get(LoggerInterface::class)->error("(LOGGER) RUNNING PROCESS STEP {$this->currentStep})");
+		echo("(ECHO) RUNNING PROCESS STEP {$this->currentStep}");
 		sleep(1);
 		$t = microtime(true);
-		Injector::inst()->get(LoggerInterface::class)->info("DONE STEP {$this->currentStep} AT T: {$t}");
+		Injector::inst()->get(LoggerInterface::class)->error("(LOGGER) DONE STEP {$this->currentStep} AT T: {$t}");
+		echo ("(ECHO)DONE STEP {$this->currentStep} AT T: {$t}");
 		$this->currentStep++;
 		$this->isComplete = $this->currentStep >= $this->totalSteps;
 	}

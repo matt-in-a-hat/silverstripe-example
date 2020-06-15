@@ -2,9 +2,9 @@
     "name": "matt/silverstripe-example",
     "type": "project",
     "require": {
-        "cwp/cwp-recipe-core": "2.4.0@stable",
-        "cwp/cwp-recipe-cms": "2.4.0@stable",
-        "cwp/cwp-recipe-search": "2.4.0@stable"
+        "silverstripe/recipe-core": "^4.5",
+        "silverstripe/recipe-cms": "^4.5",
+        "symbiote/silverstripe-queuedjobs": "^4.5"
     },
     "authors": [
         {
@@ -18,6 +18,7 @@
             "app/_config.php",
             "app/_config/blog.yml",
             "app/_config/environmentcheck.yml",
+            "app/_config/mimevalidator.yml",
             "app/_config/mysite.yml",
             "app/src/Page.php",
             "app/src/PageController.php"

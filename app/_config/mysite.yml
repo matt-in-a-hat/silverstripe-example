@@ -3,3 +3,11 @@ Name: myproject
 ---
 SilverStripe\Core\Manifest\ModuleManifest:
   project: app
+---
+Name: localproject
+After: '#queuedjobsettings'
+---
+SilverStripe\Core\Injector\Injector:
+  Symbiote\QueuedJobs\Services\QueuedJobService:
+    properties:
+      queueRunner: %$DoormanRunner
