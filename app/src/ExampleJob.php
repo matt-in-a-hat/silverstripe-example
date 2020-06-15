@@ -40,6 +40,7 @@ class ExampleJob extends AbstractQueuedJob implements QueuedJob
 	public function process() {
 		Injector::inst()->get(LoggerInterface::class)->error("(LOGGER) RUNNING PROCESS STEP {$this->currentStep})");
 		echo("(ECHO) RUNNING PROCESS STEP {$this->currentStep}");
+		error_log("(error_log) RUNNING PROCESS STEP {$this->currentStep}");
 		sleep(1);
 		$t = microtime(true);
 		Injector::inst()->get(LoggerInterface::class)->error("(LOGGER) DONE STEP {$this->currentStep} AT T: {$t}");
